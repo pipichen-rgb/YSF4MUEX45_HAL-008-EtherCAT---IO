@@ -1,11 +1,24 @@
 工程说明：SPI-EtherCAT - IO.docx
-Drivers/*
+
 删除编译信息文件(缩小体积方便备份).bat
 EWARM/*
-MDK-ARM/*
+
 Readme/01.开发环境说明.txt
 SPI-EtherCAT - IO.docx
 Readme/*
 Ethercat/src/TcHelper.dll
 Ethercat/src/TcHelper.lib
 2024-12-07-log.txt
+
+# 添加MDK 工具链
+#MDK-ARM/
+MDK-ARM/YS-F4STD/*
+
+# Drivers/*
+Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/iar/*.icf
+Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/iar/*
+Drivers/CMSIS/DSP/*
+Drivers/CMSIS/Lib/*
+Drivers/CMSIS/NN/*
+Drivers/CMSIS/LICENSE.txt
+Drivers/CMSIS/Device/ST/STM32F4xx/LICENSE.txt
