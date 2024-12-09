@@ -365,7 +365,7 @@ void APPL_OutputMapping(UINT16* pData)
 *////////////////////////////////////////////////////////////////////////////////////////
 void APPL_Application(void)
 {
-  
+    // 2024-12-07 更新输出
 	if(sDOOutputs.bLED1){
 			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
 	}
@@ -379,6 +379,7 @@ void APPL_Application(void)
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_RESET);
 	}	
 
+    // 2024-12-07 更新输入
 	sDIInputs.bSwitch1    = HAL_GPIO_ReadPin(GPIOG,GPIO_PIN_15);
 	sDIInputs.bSwitch2    = HAL_GPIO_ReadPin(GPIOG,GPIO_PIN_12);
 	sDIInputs.bSwitch3    = HAL_GPIO_ReadPin(GPIOG,GPIO_PIN_10);
@@ -475,7 +476,7 @@ void main(void)
 
     bRunApplication = TRUE;
     do
-    {
+    {// 2024-12-07 一直在这里运行
         MainLoop();
 
     } while (bRunApplication == TRUE);

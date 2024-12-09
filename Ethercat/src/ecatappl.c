@@ -204,7 +204,7 @@ void PDO_OutputMapping(void)
  *////////////////////////////////////////////////////////////////////////////////////////
 
 void ECAT_CheckTimer(void)
-{
+{// 2024-12-09 硬件定时器 1ms 的周期 执行一次中断
     if(sSyncManOutPar.u32CycleTime == 0)
     {
         u16BusCycleCntMs++;
@@ -218,7 +218,7 @@ void ECAT_CheckTimer(void)
 
 
 
-     DC_CheckWatchdog();
+     DC_CheckWatchdog();// 2014-12-09 执行一次 DC 看门狗的 喂狗操作
 }
 
 /*ECATCHANGE_START(V5.11) ECAT6*/

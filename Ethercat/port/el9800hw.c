@@ -227,7 +227,7 @@ UALEVENT;
 ------
 --------------------------------------------------------------------------------------*/
 UALEVENT         EscALEvent;            //contains the content of the ALEvent register (0x220), this variable is updated on each Access to the Esc
-
+// 应用层事件：
 /*--------------------------------------------------------------------------------------
 ------
 ------    internal functions
@@ -749,9 +749,9 @@ void EcatIsr(void)
 /**
  \brief    Interrupt service routine for the interrupts from SYNC0
 *////////////////////////////////////////////////////////////////////////////////////////
-
+// 2024-12-09 进行硬件移植时，需要使用到
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
+{// 2024-12-09 使用外部GPIO的 外部中断回调函数，在该函数内执行 具体的回调功能
   if(GPIO_Pin==GPIO_PIN_4)
   {		
      PDI_Isr();
